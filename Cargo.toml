@@ -1,0 +1,23 @@
+[package]
+name = "rust-experiments"
+version = "0.1.0"
+authors = ["Noel Kwan <noelkwan1998@gmail.com"]
+edition = "2018"
+
+# For running a particular bin e.g. sqs # cargo run --bin sqs
+[[bin]]
+ name = "sequence"
+ path = "src/sequence.rs"
+
+[[bin]]
+ name = "futures"
+ path = "src/futures.rs"
+
+[[bin]]
+ name = "single-task"
+ path = "src/single-task.rs"
+
+[dependencies]
+futures = "0.3.4"
+tokio = {version = "0.2.15", features = ["full"]}
+criterion = "0.3"
